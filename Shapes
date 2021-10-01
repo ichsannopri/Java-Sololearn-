@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+abstract class Shape {
+    int width;
+    abstract void area();
+}
+class Circle {
+    int x;
+    public Circle(int x){this.x=x;}
+     public void area(){
+         System.out.println(Math.PI*x*x);
+     }
+}
+class Square {
+    int x;
+    public Square(int x){this.x=x;}
+     public void area (){
+         System.out.println(x*x);
+     }
+}
+//your code goes here
+
+
+public class Program {
+    public static void main(String[ ] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        
+        Square a = new Square(x);
+        Circle b = new Circle(y);
+        a.area();
+        b.area();
+    }
+}
